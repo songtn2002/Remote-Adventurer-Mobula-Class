@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id = "@+id/camera_image"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="#000000"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#ff0000">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Light Switch"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"/>
+
+            <Switch
+                android:id="@+id/light_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:showText="true"
+                android:textOff="OFF"
+                android:textOn="ON"
+                android:background="#00ff00"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:background="#0000ff">
+
+            <TextView
+                android:id = "@+id/buoyancy"
+                android:text="P"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="#ffffff"
+                />
+
+            <Button
+                android:id="@+id/buoyancy_plus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:textSize="24sp"
+                android:layout_alignBottom="@id/buoyancy"
+                android:textAlignment="center"
+                android:layout_toLeftOf="@id/buoyancy"
+                android:background="#00ff00"/>
+
+            <Button
+                android:id = "@+id/buoyancy_minus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:textSize="24sp"
+                android:layout_alignBottom="@id/buoyancy"
+                android:textAlignment="center"
+                android:layout_toRightOf="@id/buoyancy"
+                android:background="#00ff00"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="16">
+
+            <TextView
+                android:id = "@+id/speed_view"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text = "0"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:background="@drawable/circle_center"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+            <Button
+                android:id = "@+id/acc_button"
+                android:layout_width="50dp"
+                android:layout_height="65dp"
+                android:layout_above="@id/speed_view"
+                android:layout_alignLeft="@id/speed_view"
+                android:background="@drawable/arrow_up"
+                android:layout_marginBottom="5dp"/>
+
+            <Button
+                android:id = "@+id/dcc_button"
+                android:layout_width="50dp"
+                android:layout_height="65dp"
+                android:layout_below="@id/speed_view"
+                android:layout_alignLeft="@id/speed_view"
+                android:background="@drawable/arrow_down"
+                android:layout_marginTop="5dp"/>
+
+            <Button
+                android:id="@+id/left_button"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_toLeftOf="@id/speed_view"
+                android:layout_alignBottom="@id/speed_view"
+                android:background="@drawable/arrow_left"
+                android:layout_marginRight="5dp"/>
+
+            <Button
+                android:id = "@+id/right_button"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/speed_view"
+                android:layout_alignBottom="@id/speed_view"
+                android:background="@drawable/arrow_right"
+                android:layout_marginLeft="5dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
